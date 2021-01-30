@@ -75,7 +75,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void onLoginFinished() {
-        Intent redirectIntent = getIntent().getParcelableExtra(INTENT_REDIRECT_KEY);
+	//Intent redirectIntent = getIntent().getParcelableExtra(INTENT_REDIRECT_KEY);
+	Intent testIntent = getIntent();
+	Intent redirectIntent = testIntent.getParcelableExtra(INTENT_REDIRECT_KEY);
         if(redirectIntent != null) {
             startActivity(redirectIntent);
         }
